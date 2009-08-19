@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :documents
+  map.search '/search', :controller => 'application', :action => 'search'
 
   # The priority is based upon order of creation: first created -> highest priority.
 

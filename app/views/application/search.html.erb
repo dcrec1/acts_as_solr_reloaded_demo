@@ -1,0 +1,11 @@
+<% for doc in @solr_result.docs %>
+  <p>Documento: <%= doc.tag_list %></p>
+<% end %>
+
+</br>
+
+Facets:
+
+<% @solr_result.facets['facet_fields']['tag_facet'].each do |attribute, count| %>
+  <p><%= attribute %> => <%= count %></p>
+<% end unless @solr_result.facets['facet_fields'].empty? %>
