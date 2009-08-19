@@ -2,6 +2,11 @@
 
 <% form_for(@document) do |f| %>
   <%= f.error_messages %>
+  
+  <p>
+    <%= f.label 'Tags' %>
+    <%= f.text_field :tag_list %>
+  </p>
 
   <p>
     <%= f.submit 'Create' %>
